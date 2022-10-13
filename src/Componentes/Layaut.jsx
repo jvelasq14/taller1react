@@ -27,6 +27,7 @@ export const Layaut = () => {
           setPokeData(state=>{
               state=[...state,result.data]
               state.sort((a,b)=>a.id>b.id?1:-1)
+               console.log(result)
               return state;
           })
        })   
@@ -40,15 +41,18 @@ export const Layaut = () => {
           <>
             <div className="container">
                 <div className="left-content">
-                    <Cards pokemon={pokeData} loading={loading} infoPokemon={poke=>setPokeDex(poke)}/>
+                    <div  className="float-end">
+                         <Cards pokemon={pokeData} loading={loading} infoPokemon={poke=>setPokeDex(poke)}/>
+                    </div>
+                 
                     
                     <div className="btn-group">
-                        {  prevUrl && <button onClick={()=>{
+                        {  prevUrl && <button  className="btn btn-primary" onClick={()=>{
                             setPokeData([])
                            setUrl(prevUrl) 
                         }}>Previous</button>}
 
-                        { nextUrl && <button onClick={()=>{
+                        { nextUrl && <button className="btn btn-primary" onClick={()=>{
                             setPokeData([])
                             setUrl(nextUrl)
                         }}>Next</button>}
