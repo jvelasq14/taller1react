@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Cards = ({ pokemon, loading,infoPokemon}) => {
   return (
     <div>
@@ -9,13 +8,13 @@ const Cards = ({ pokemon, loading,infoPokemon}) => {
                     return (
                         <>
                         <div className='row'>
-                          <div className='col-6'>
-                          <div className="card" key={item.id} onClick={()=>infoPokemon(item)}>
+                          <div className='col mb-2 ' >
+                          <div className='card'  key={item.id} onClick={()=>infoPokemon(item)}>
                             <img src={item.sprites.front_default} height="250px" width="100px" className='card-img-top' />
                               <div className='card-body'>
-                                <ul>
-                                  <li>{item.id}</li>
-                                  <li>{item.name}</li>
+                                <ul className="list-group list-group-flush">
+                                  <li className="list-group-item">ID: {item.id}</li>
+                                  <li className="list-group-item">NOMBRE: {item.name}</li>
                                 </ul>
                               </div>
                             </div>
