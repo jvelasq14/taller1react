@@ -50,12 +50,12 @@ export const Layaut = () => {
                         {  prevUrl && <button  className="btn btn-primary" onClick={()=>{
                             setPokeData([])
                            setUrl(prevUrl) 
-                        }}>Previous</button>}
+                        }}>Anterior</button>}
 
                         { nextUrl && <button className="btn btn-primary" onClick={()=>{
                             setPokeData([])
                             setUrl(nextUrl)
-                        }}>Next</button>}
+                        }}>Siguiente</button>}
 
                     </div>
                 </div>
